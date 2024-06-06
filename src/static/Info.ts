@@ -4,7 +4,7 @@ export const AppSizes = {
 
 export const AppColor = {
     primary: "#B1E813",
-    secondary: "",
+    secondary: "#9380FE",
     background: "#0D0D0D",
     iconBg: "#1B1B1B",
     dividerColor: "#474747"

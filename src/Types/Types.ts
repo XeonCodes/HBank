@@ -1,5 +1,3 @@
-export interface QuickLinks {
-    id: number,
+export interface PageSectionTypes {
     title: string,
-    icon: string
 }
