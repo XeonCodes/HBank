@@ -4,12 +4,13 @@ import { AppImages } from "../static/Assets"
 import { AppColor, AppSizes, OpacityLevel } from "../static/Info"
 import Icons from 'react-native-vector-icons/Ionicons';
 import { CurrencyFormat } from "../Utilities/Functions";
-
+import { QuickLink } from "../static/JsonMap";
+import Icon from 'react-native-vector-icons/Ionicons';
 
 // Home Page
 const HomePage = ({navigation}:any) => {
     return (
-      <SafeAreaView style={{flex: 1, backgroundColor: AppColor.background}}>
+      <SafeAreaView style={{flex: 1, backgroundColor: AppColor.background, gap: 20}}>
 
         {/* Header */}
         <View style={{paddingHorizontal: AppSizes.horizontalPadding, }}>
@@ -56,6 +57,21 @@ const HomePage = ({navigation}:any) => {
 
           </View>
         </View>
+
+        {/* Quick Links */}
+        <View style={{flexDirection: 'row', justifyContent: 'center', gap: 30}}>
+          {QuickLink.map((v:any, i:any) => 
+
+            <View key={i} style={{alignItems: 'center', gap: 8}}>
+              <View style={{height: 60, width: 60, borderRadius: 25, justifyContent: 'center', alignItems: 'center', backgroundColor: AppColor.iconBg}}>
+                <Icon name={v.icon} size={24} color={"white"} />
+              </View>
+              <Text style={{color: 'white', fontSize: 15}}>{v.title}</Text>
+            </View>
+
+          )}
+        </View>
+
 
       </SafeAreaView>
     )
