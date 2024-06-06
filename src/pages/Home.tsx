@@ -21,8 +21,6 @@ const HomePage = ({navigation}:any) => {
             paddingBottom: 10
           }}>
 
-              
-
             {/* Top */}
             <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
 
